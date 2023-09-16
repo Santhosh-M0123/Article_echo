@@ -37,7 +37,7 @@ const Recent = (props) => {
           >
             <div className="recent_container">
               <FiLink2 className="link_icon" />
-              <p>{i.Url}</p>
+              <p>{i.Url.slice(0,45)}</p>
             </div>
           </div>
         );
