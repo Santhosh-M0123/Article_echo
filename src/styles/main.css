@@ -108,6 +108,7 @@
   .input {
     width: 390px;
     height: 45px;
+    /* background-color: red; */
   }
 
   .recent_tab {

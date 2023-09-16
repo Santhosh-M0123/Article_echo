@@ -11,7 +11,7 @@ const Header = () => {
             <h4>Article <span className='text'>echo</span></h4>
         </div>
         <div className="social_navigations" title='Follow me on'>
-            <div className="social_btn github" onClick={OpenLink()}>
+            <div className="social_btn github" onClick={() => OpenLink}>
                 linkedIn
             </div>
         </div>
