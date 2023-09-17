@@ -42,9 +42,9 @@ const Recent = (props) => {
           </div>
         );
       })}
-      <div className="show_more" onClick={ShowMore}>
+      {props.data.length > 2 ? <div className="show_more" onClick={ShowMore}>
         {content}
-      </div>
+      </div>: " "}
     </div>
   );
 };

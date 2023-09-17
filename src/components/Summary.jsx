@@ -32,7 +32,7 @@ const Summary = (props) => {
         ) : (
           <div className="no_article">
             <h4>There is No article to summarize</h4>
-            <p>Please Enter the article link to sumamrize</p>
+            <p>Please Enter the article link to summarize</p>
           </div>
         )}
       </div>
