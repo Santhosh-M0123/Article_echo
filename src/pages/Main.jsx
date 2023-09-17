@@ -97,7 +97,7 @@ const Main = () => {
           AI content <span className="text">summarizer</span>
         </h1>
         {/* <h3>Unlocking Knowledge, One Click at a Time</h3> */}
-        <h3>Instant content summaries from any URL</h3>
+        <h3>Instant content summaries</h3>
         <h4>Summarize your article, post, blog from pasting the Url..</h4>
       </section>
       <section>
