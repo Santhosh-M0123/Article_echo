@@ -109,6 +109,10 @@
     margin-top: 10px;
 }
 
+.loaders{
+  padding: 60px 0px;
+}
+
 @media (max-width: 680px) {
   .input {
     width: 390px;

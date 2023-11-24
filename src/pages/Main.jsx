@@ -132,7 +132,8 @@ const Main = () => {
         ""
       )}
         <section className="summary">
-          {loading ? <MagnifyingGlass
+          {loading ? <div className="loaders">
+            <MagnifyingGlass
           visible={true}
           height="80"
           width="80"
@@ -142,7 +143,8 @@ const Main = () => {
           glassColor="#c0efff"
           color="#e15b64"
           className="search_icon"
-        /> : <Summary data={summaryData} />}
+        />
+          </div> : <Summary data={summaryData} />}
         </section>
     </div>
   );
