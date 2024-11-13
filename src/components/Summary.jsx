@@ -24,7 +24,7 @@ const Summary = (props) => {
         </CopyToClipboard>
       </div>
       <div>
-        {props.data.totalWords > 0 ? (
+        {props.data.summary?.length > 0 ? (
           <div>
             <h3 className="title_article">{props.data.title}</h3>
             <p className="summary_article">{props.data.summary}</p>

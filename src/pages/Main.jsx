@@ -32,23 +32,35 @@ const Main = () => {
       if (url.length > 0) {
         let bool = checkInputType(url);
         if (bool) {
+          // d8321af64emsha564765e3cf5c24p101c4fjsn6d0b87e0976f
           setLoading(true);
           let Api_key = process.env.REACT_APP_API_KEY;
-          let Api_url = `https://api.smmry.com/&SM_API_KEY=${Api_key}&SM_URL=${url}`;
-          let Response = await axios.get(Api_url);
-          // console.log(Response)
-          if (Response.status == 200) {
-            let data = Response.data;
+          let Api_url = `https://summarize-this.p.rapidapi.com/summarize_url?url=${url}`;
+          let response = await axios.post(
+            Api_url,
+            {}, // Pass an empty object for data since this API might not expect a payload
+            {
+                headers: {
+                    'x-rapidapi-key': 'd8321af64emsha564765e3cf5c24p101c4fjsn6d0b87e0976f',
+                    'x-rapidapi-host': 'summarize-this.p.rapidapi.com',
+                    'Content-Type': 'application/json'
+                }
+            }
+        );
+          // console.log(response)
+          if (response.status == 200) {
+            let data = response.data;
             // console.log(data);
             setValidate(false)
             setLoading(false);
             if (data) {
               let d = {
                 Url: url,
-                totalWords: parseInt(data.sm_api_character_count),
-                title: data.sm_api_title,
-                wordsReduced: data.sm_api_content_reduced,
-                summary: data.sm_api_content,
+                // totalWords: parseInt(data.sm_api_character_count),
+                // title: data.sm_api_title,
+                // wordsReduced: data.sm_api_content_reduced,
+                // summary: data.sm_api_content,
+                summary: data.summary
               };
               setSummaryData(d);
               let UpdateallSummary = [d, ...allSummary];
